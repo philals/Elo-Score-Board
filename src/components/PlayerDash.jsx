@@ -3,10 +3,11 @@ import ReactFire from 'reactfire';
 import Firebase from 'firebase';
 import Player from './gametable/player';
 import PlayerCard from './playerdash/player-card';
+import EloGraph from './playerdash/elo-graph';
 import Icon from './common/icon';
 import conf from '../../app.config.json';
 import _ from 'lodash';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 
 module.exports = React.createClass({
 
@@ -37,6 +38,7 @@ module.exports = React.createClass({
             <PlayerCard player={player} />
           </div>
           <div className="col-md-8">
+            <EloGraph player={player} />
           </div>
         </div>
       </div>
